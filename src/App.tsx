@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import "./App.css";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Home from "./components/Home";
-import Login from "./components/Login";
-import Register from "./components/Register";
+import Login from "./components/pages/Login";
+import Register from "./components/pages/Register";
 import Header from "./components/Header";
 
 const App = () => {

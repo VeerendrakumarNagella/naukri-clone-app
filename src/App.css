@@ -1,3 +1,55 @@
+.header-info {
+  display: flex;
+  background-color: teal;
+  color: whitesmoke;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.header-info a {
+  text-decoration: none;
+}
+
+.container {
+  display: flex;
+  padding: 10px;
+}
+
+.section-1 {
+  border: 1px teal;
+  margin-left: 10px;
+  border-radius: 10px;
+  padding: 10px;
+
+
+}
+
+.section-2 {
+  padding: 10px;
+  border-radius: 10px;
+  margin-left: 100px;
+  border: 1px teal;
+
+}
+
+
+.work-status {
+  display: flex;
+
+}
+
+.work-status-1 {
+  border: 1px solid black;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+input {
+  border-radius: 5px;
+  padding: 5px;
+  width: 300px;
+}
+
 .form-info {
   padding: 20px;
   text-align: center;
@@ -31,17 +83,16 @@ form {
 }
 
 
-p {
+.errorText {
   color: #bf1650;
 }
 
-p::before {
-  display: inline;
+.errorText::before {
   content: "⚠ ";
 }
 
 input {
-  display: block;
+  display: inline-block;
   box-sizing: border-box;
   width: 100%;
   border-radius: 4px;
@@ -57,18 +108,6 @@ input[type="checkbox"] {
   height: 22px;
   margin: 0 3px;
 
-}
-
-label {
-  line-height: 2;
-  text-align: left;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  margin: 5px 0;
-  color: white;
-  font-size: 14px;
-  font-weight: 200;
 }
 
 button[type="submit"],
@@ -185,4 +224,40 @@ input[type="button"]:hover {
 button a {
   color: white;
   text-decoration: none;
+}
+
+
+/* Form styles */
+
+button {
+  padding: 9px 15px;
+  color: white;
+  background-color: #1976d2;
+  margin: 0 5px;
+  border: none;
+  letter-spacing: 0.33px;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: #075099;
+}
+
+button.outlined {
+  border: 1px solid white;
+}
+
+.form-element {
+  margin: 10px 0;
+}
+
+.form-element label {
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+button[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+  opacity: 0.3;
 }

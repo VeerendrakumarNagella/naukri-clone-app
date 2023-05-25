@@ -118,20 +118,21 @@ function Header({ auth, setAuth }: any) {
             ))}
           </Box>
           {auth ? (
-            <Button
+            <button
+              className="outlined"
               style={{ border: "1px solid white", color: "white" }}
               onClick={handleClick}
             >
               Logout
-            </Button>
+            </button>
           ) : (
             <>
-              <Button color="info">
+              <button className="outlined">
                 <Link to="/login">Login</Link>
-              </Button>
-              <Button variant="outlined">
+              </button>
+              <button className="outlined">
                 <Link to="/register">Register</Link>
-              </Button>
+              </button>
             </>
           )}
         </Toolbar>
@@ -139,4 +140,5 @@ function Header({ auth, setAuth }: any) {
     </AppBar>
   );
 }
+
 export default Header;

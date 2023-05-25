@@ -1,6 +1,6 @@
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
-import loginpic from "./images/loginpic.png";
+import loginpic from "../images/loginpic.png";
 import { FC } from "react";
 
 interface LoginProps {
