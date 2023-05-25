@@ -5,15 +5,12 @@ import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import Menu from "@mui/material/Menu";
-// import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
-// import AdbIcon from "@mui/icons-material/Adb";
 import { Link, useNavigate } from "react-router-dom";
 
 const pages = ["Jobs", "Companies", "Services"];
-// const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 function Header({ auth, setAuth }: any) {
   const navigate = useNavigate();
@@ -39,23 +36,22 @@ function Header({ auth, setAuth }: any) {
     <AppBar position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          {/* <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} /> */}
           <Typography
             variant="h6"
             noWrap
-            component="a"
-            href="/"
             sx={{
               mr: 2,
               display: { xs: "none", md: "flex" },
               fontFamily: "monospace",
               fontWeight: 700,
               letterSpacing: ".3rem",
-              color: "inherit",
+              color: "white",
               textDecoration: "none",
             }}
           >
-            Naukari.com
+            <Link style={{ color: "white" }} to="/">
+              Naukari.com
+            </Link>
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
@@ -66,9 +62,7 @@ function Header({ auth, setAuth }: any) {
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
               color="inherit"
-            >
-              {/* <MenuIcon /> */}
-            </IconButton>
+            ></IconButton>
             <Menu
               id="menu-appbar"
               anchorEl={anchorElNav}
@@ -94,12 +88,9 @@ function Header({ auth, setAuth }: any) {
               ))}
             </Menu>
           </Box>
-          {/* <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} /> */}
           <Typography
             variant="h5"
             noWrap
-            component="a"
-            href=""
             sx={{
               mr: 2,
               display: { xs: "flex", md: "none" },
@@ -107,11 +98,13 @@ function Header({ auth, setAuth }: any) {
               fontFamily: "monospace",
               fontWeight: 700,
               letterSpacing: ".3rem",
-              color: "inherit",
+              color: "white",
               textDecoration: "none",
             }}
           >
-            Naukari.com
+            <Link style={{ color: "white" }} to="/">
+              Naukari.com
+            </Link>
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map((page) => (
@@ -125,15 +118,20 @@ function Header({ auth, setAuth }: any) {
             ))}
           </Box>
           {auth ? (
-            <button onClick={handleClick}>Logout</button>
+            <Button
+              style={{ border: "1px solid white", color: "white" }}
+              onClick={handleClick}
+            >
+              Logout
+            </Button>
           ) : (
             <>
-              <button>
+              <Button color="info">
                 <Link to="/login">Login</Link>
-              </button>
-              <button>
+              </Button>
+              <Button variant="outlined">
                 <Link to="/register">Register</Link>
-              </button>
+              </Button>
             </>
           )}
         </Toolbar>

@@ -34,16 +34,13 @@ const Login: FC<LoginProps> = ({ setAuth }) => {
         <h1>New to Naukri? </h1>
         <ul>
           <li> One click apply using naukri profile.</li>
-
           <li> Get relevant job recommendations.</li>
-
           <li>Showcase profile to top companies and consultants.</li>
-
           <li>Know application status on applied jobs.</li>
         </ul>
         <div>
           <button>
-            <Link to="./register">Register for free</Link>
+            <Link to="/register">Register for free</Link>
           </button>
         </div>
         <img src={loginpic} alt="pic" />
